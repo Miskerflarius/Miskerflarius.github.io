@@ -1,0 +1,39 @@
+#title {
+    font-size: 50px;
+    text-align: center;
+    margin-bottom: 5px;
+}
+#subt {
+    margin-top: 5px;
+    font-size: 30px;
+    text-align: center;
+}
+body{
+    background-image: url("piche.jpg");
+	background-color: rgb(255, 157, 157);
+    height: 100% auto;
+    font-family: 'Courier New', Courier, monospace;
+}
+#body{
+	background-color:white;
+	width:960px;
+	margin: auto;
+	padding: 10px;
+}
+#menucl {
+    background-color: #dad8d8;
+}
+hr{
+    border-width: 10px;
+}
+#img {
+	background-color: tomato;
+	height: 250 px;
+    width:965px;
+}
+#Int{
+
+}
+#input {
+    padding-left: 5 px ;
+}
