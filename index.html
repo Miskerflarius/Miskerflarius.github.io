@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+	<title>Pincha Honk't</title>
+	<link rel="stylesheet" type="text/css" href="Pincha.css">
+	<script type="text/javascript">
+		function CheckNum(){
+			var num = document.getElementById('number').value;
+			if (num.length == 11) {
+
+					if (num[0] == 0) {
+						if (num[0] == 0) {
+							document.getElementById('numCor').innerHTML = ""
+							document.getElementById('numError').innerHTML = ""
+							document.getElementById('numCor').innerHTML = "Number input is correct"
+					}
+						else{
+							document.getElementById('numCor').innerHTML = ""
+							document.getElementById('numError').innerHTML = ""
+							document.getElementById('numError').innerHTML = "Second digit must be 9"
+					}
+					}
+					else{
+						document.getElementById('numCor').innerHTML = ""
+						document.getElementById('numError').innerHTML = ""
+						document.getElementById('numError').innerHTML = "First digit must be 0"
+					}
+					}
+				else{
+					document.getElementById('numCor').innerHTML = ""
+					document.getElementById('numError').innerHTML = ""
+					document.getElementById('numError').innerHTML = "Number must be 11 digits long"
+				}
+			}
+
+		function CheckFlavor(){
+			var F =false;
+			if(document.getElementById('f1').checked == true){
+				F = document.getElementById('f1').value
+				document.getElementById('FError').innerHTML = ""
+				document.getElementById('FC').innerHTML = "Flavor is available!"
+			}else if (document.getElementById('f2').checked == true) {
+				F = document.getElementById('f2').value
+				document.getElementById('FError').innerHTML = ""
+				document.getElementById('FC').innerHTML = "Flavor is available!"
+			}else if (document.getElementById('f3').checked == true){
+				F = document.getElementById('f3').value
+				document.getElementById('FError').innerHTML = ""
+				document.getElementById('FC').innerHTML = "Flavor is available!"
+			}else if (document.getElementById('f4').checked == true) {
+				F = document.getElementById('f4').value
+				document.getElementById('FError').innerHTML = ""
+				document.getElementById('FC').innerHTML = "Flavor is available!"
+			}else if (document.getElementById('f5').checked == true){
+				F = document.getElementById('f5').value
+				document.getElementById('FError').innerHTML = ""
+				document.getElementById('FC').innerHTML = "Flavor is available!"
+			}
+			else{
+				document.getElementById('FError').innerHTML = "Please select flavor"
+			}
+		}
+		function CheckSize(){
+			var S =false;
+			if(document.getElementById('s1').checked == true){
+				S = document.getElementById('s1').value
+				document.getElementById('SError').innerHTML = ""
+				document.getElementById('SC').innerHTML = "Size is available!"
+			}else if (document.getElementById('s2').checked == true) {
+				S = document.getElementById('s2').value
+				document.getElementById('SError').innerHTML = ""
+				document.getElementById('SC').innerHTML = "Size is available!"
+			}else if (document.getElementById('s3').checked == true){
+				S = document.getElementById('s3').value
+				document.getElementById('SError').innerHTML = ""
+				document.getElementById('SC').innerHTML = "Size is available!"
+			}else if (document.getElementById('s4').checked == true) {
+				S = document.getElementById('s4').value
+				document.getElementById('SError').innerHTML = ""
+				document.getElementById('SC').innerHTML = "Size is available!"
+			}
+			else{
+				document.getElementById('SError').innerHTML = "Please select size"
+			}
+		}
+	</script>
+</head>
+<body><div id="body">
+	<div id="menucl">
+	<div id="img">
+	<img src="Pincha New.png" style="width: 965px;">
+	</div>
+	<hr style="size: 50px;">
+	<div id="Int">
+	<p id="title"><b>Pincha Honk't</b></p>
+	<p id="subt">Order pizza for free!</p>
+	</div>
+	<div id="form">
+		<p><b>Please fill out the following information:</b></p>
+		<div id="Perinf">
+		<br><b>
+		Customer Name:</b><input type="text" id="first anem" placeholder="Ex: Man Joe" required=""><br><br><b>
+		Mobile Number:</b><input type="number" id="number">(Format: 09*********)<label id="numError" style="color: red"></label><label id="numCor" style="color: green"></label><br>
+		<button onclick="CheckNum()">Check Number Validity</button><br><br>
+		<b>Email:</b><input type="Email" id="email" placeholder="Ex:sugondese@coldmail.com"><br></div>
+		<div id="prefer"><br><b>
+		Pizza Options:
+</b><br>
+				<br><b>Flavor:</b><br><br></li>
+					<input type="radio" name="Flavor" value="hawaii" id="f1">Hawaiian
+					<input type="radio" name="Flavor" value="Cheesy" id="f2">Cheesy
+					<input type="radio" name="Flavor" value="Gucci" id="f3">Gucci
+					<input type="radio" name="Flavor" value="Meat Overload" id="f4">Meat Overload
+					<input type="radio" name="Flavor" value="Pepperoni" id="f5">Pepperoni<br>
+					<label id="FError" style="color: red"></label><label id="FC" style="color: green"></label>
+					<br><button onclick="CheckFlavor()">Check Flavor Availability</button><br>
+					<br>
+					
+				<b>Size:</b><br><br></li>
+					<input type="radio" name="Size" value="Extra Small" id="s1">Extra Small(To Go)
+					<input type="radio" name="Size" value="Small" id="s2">Small
+					<input type="radio" name="Size" value="Large" id="s3">Large
+					<input type="radio" name="Size" value="Table Size" id="s4">Table Size
+					<br>
+					<label id="SError" style="color: red"></label><label id="SC" style="color: green"></label>
+					<br><button onclick="CheckSize()">Check Size Availability</button><br>
+					<br>	
+				<b>Extra Toppings:</b><br><br></li>
+					<input type="checkbox" name="ToppingsX" value="Cheese">Cheese
+					<input type="checkbox" name="ToppingsX" value="Bacon">Bacon
+					<input type="checkbox" name="ToppingsX" value="Childhood Dreams">Childhood Dreams
+					<input type="checkbox" name="ToppingsX" value="Blue Cheese">Blue Cheese
+					<input type="checkbox" name="ToppingsX" value="Marquee">Marquee
+					<p id="note"><button onmouseover="document.getElementById('note').innerHTML = 'There is no need to check! We always make sure we have toppings ready!'" onmouseleave="document.getElementById('note').innerHTML = ''">Check Size Availability</button></p>
+					<br>
+					
+					
+		
+		</div>
+		<div id="deldev">
+		<p><b>Delivery Details:</b></p><b>
+		Delivery Date:</b><br>
+		<input type="date" name="Date"><br><br><b>
+		Delivery Time:</b><br>
+		<input type="time" name="Date"><br><br>
+		</div>
+		
+	<div id="comsub">	<form>
+		Anything else you would like us to know before you submit your order? (Optional):<br>
+		<textarea rows="5" cols="70" placeholder="Feel free to leave a comment!"></textarea><br>
+		<input type="submit" name="submit"><br></form>
+	</div>
+	</div>
+	</div>
+	</div>
+
+</body></html>
